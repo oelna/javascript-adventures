@@ -4,6 +4,10 @@ For my class [HTML](https://github.com/oelna/hsma-html) (which is in fact HTML, 
 
 They are really only sandboxes, no actual story or content. But I enjoy working on the problem of how to structure the framework, player objects and screen objects and how to navigate between them.
 
+- [Sandbox 1](https://oelna.github.io/javascript-adventures/sandbox-1/game.html)
+- [Sandbox 2](https://oelna.github.io/javascript-adventures/sandbox-2/index.html)
+- [Sandbox 3](https://oelna.github.io/javascript-rpg-sandbox/) ([external repo](https://github.com/oelna/javascript-rpg-sandbox))
+
 Overview and demos: https://oelna.github.io/javascript-adventures/
 
 Enjoy!
