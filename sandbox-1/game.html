@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+	<meta charset="utf-8" />
+	<title>game test</title>
+
+	<link rel="stylesheet" href="game.css" />
+</head>
+<body>
+
+	<ul id="story">
+		<li id="s-1" class="active">
+			<p class="image"><img src="images/cavern_01.jpg"></p>
+			<p>YOU ARE IN A MAZE OF TWISTY LITTLE PASSAGES, ALL ALIKE.</p>
+			<p class="generated-message"></p>
+			<nav>
+				<button data-screen="2">Geradeaus</button><br />
+				<button data-screen="4">Nach rechts</button>
+			</nav>
+		</li>
+		<li id="s-2">
+			<p class="image"><img src="images/cavern_02.jpg"></p>
+			<p>YOU ARE IN A VALLEY IN THE FOREST BESIDE A STREAM TUMBLING ALONG A ROCKY BED.</p>
+			<p class="generated-message"></p>
+			<nav>
+				<button data-screen="1">Zurück</button><br />
+				<button data-screen="4">Tür öffnen</button>
+			</nav>
+		</li>
+		<li id="s-4">
+			<p class="image"><img src="images/cavern_03.jpg"></p>
+			<p>YOU FELL INTO A PIT AND BROKE EVERY BONE IN YOUR BODY!</p>
+			<p class="generated-message"></p>
+			<nav>
+				<button data-screen="1">Flucht</button><br />
+				<button data-screen="2">Vorwärts</button><br />
+				<button data-screen="8" class="hidden h-1">Geheime Option</button>
+			</nav>
+		</li>
+		<li id="s-8">
+			<p class="image"><img src="images/cavern_04.jpg"></p>
+			<p>secret room 8</p>
+			<p class="generated-message"></p>
+			<nav>
+				<button data-screen="1">Zum Anfang</button>
+			</nav>
+		</li>
+	</ul>
+
+	<script type="" src="game.js"></script>
+</body>
+</html>

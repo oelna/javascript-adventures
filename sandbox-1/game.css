@@ -1,0 +1,39 @@
+* { box-sizing: border-box; }
+
+html {
+	font: 180%/1.4 -system-ui, sans-serif;
+	background: black;
+	color: #fff;
+}
+
+.hidden { display: none; }
+
+#story nav button {
+	border: 0;
+	font-size: 1em;
+	padding: 0.2em 0.5em;
+}
+
+#story {
+	list-style: none;
+	background: #444;
+	margin: 0 auto;
+	width: 70%;
+	padding: 1em;
+}
+
+#story > li:not(.active) {
+	display: none;
+}
+
+#story .image {
+
+}
+
+#story .image img {
+	max-width: 100%;
+	width: 100%;
+	height: 12em;
+	object-fit: cover;
+	background: black;
+}
