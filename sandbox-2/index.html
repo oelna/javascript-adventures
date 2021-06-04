@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title>Adventure</title>
+	<style>
+		html {
+			background-color: #555;
+			font-family: Helvetica, Arial, sans-serif;
+		}
+
+		#world {
+			width: 70%;
+			margin: 2em auto;
+		}
+
+		#image img {
+			max-width: 100%;
+			height: auto;
+		}
+
+		#choices {
+			display: flex;
+			justify-content: space-around;
+		}
+
+		#choices p {
+			background: #fff;
+			border-radius: 0.2em;
+			padding: 0.3em 0.5em 0.2em;
+			font-weight: bold;
+			cursor: pointer;
+		}
+	</style>
+</head>
+<body>
+
+	<div id="world" data-room="room-1">
+		<div id="image"></div>
+		<ul id="choices"></ul>
+	</div>
+
+	<script src="adventuregame.js"></script>
+</body>
+</html>
