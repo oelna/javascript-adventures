@@ -7,6 +7,7 @@ They are really only sandboxes, no actual story or content. But I enjoy working 
 - [Sandbox 1](https://oelna.github.io/javascript-adventures/sandbox-1/game.html)
 - [Sandbox 2](https://oelna.github.io/javascript-adventures/sandbox-2/index.html)
 - [Sandbox 3](https://oelna.github.io/javascript-rpg-sandbox/) ([external repo](https://github.com/oelna/javascript-rpg-sandbox))
+- [Sandbox 4](https://oelna.github.io/javascript-adventures/sandbox-4/index.html)
 
 Overview and demos: https://oelna.github.io/javascript-adventures/
 
