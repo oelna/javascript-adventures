@@ -1,0 +1,174 @@
+
+@keyframes lava {
+	0% { opacity: 1; }
+	50% { opacity: 0.85; }
+	100% { opacity: 1; }
+}
+
+@keyframes lava-old {
+	0% { background-color: orange; }
+	50% { background-color: red; }
+	100% { background-color: orange; }
+}
+
+html {
+	font: 150%/1.4 -system-ui, Helvetica, sans-serif;
+	color: #000;
+	background-color: #ddd;
+}
+
+#app {
+	margin: 10vh auto;
+	width: 70%;
+	background-color: #fff;
+	padding: 1em;
+	border-radius: 0.25em;
+}
+
+.grid {
+	display: flex;
+	flex-direction: column;
+	
+	margin-bottom: 0.5em;
+}
+
+.grid > div {
+	display: flex;
+	flex-direction: row;
+}
+
+.grid > div > .tile { /* original tile size 8x8 */
+	--scale: 2;
+	width: calc(16px * var(--scale)); /* tile size 32x32 */
+	height: calc(16px * var(--scale));
+	border: 0px solid #999;
+	color: transparent;
+	background-color: #eee;
+	background-image: url(./textures.png); /* 934 × 562 */
+	background-size: calc(934px * var(--scale)) calc(562px * var(--scale));
+	background-position: left calc(-270px * var(--scale)) top calc(-57px * var(--scale)); /* tall grass */
+	/* background-position: left calc(-314px * var(--scale)) top calc(-177px * var(--scale)); */ /* tiles */
+	background-position: left calc(-304px * var(--scale)) top calc(-109px * var(--scale)); /* grass */
+	image-rendering: pixelated;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.grid > div > .tile.variant-2 {
+	background-position: left calc(-314px * var(--scale)) top calc(-177px * var(--scale)); /* tiles */
+	background-position: left calc(-320px * var(--scale)) top calc(-110px * var(--scale)); /* flowers */
+}
+
+.grid > div > .tile.variant-3 {
+	background-position: left calc(-320px * var(--scale)) top calc(-125px * var(--scale)); /* grass blades */
+}
+
+.grid > div > .tile.wall {
+	background-color: #bbb;
+	background-position: left calc(-304px * var(--scale)) top calc(-74px * var(--scale));
+}
+
+.grid > div > .tile.wall.variant-2,
+.grid > div > .tile.wall.variant-3 {
+	background-position: left calc(-320px * var(--scale)) top calc(-74px * var(--scale));
+}
+
+.grid > div > .tile.path {
+	background-color: rgb(144, 205, 255);
+}
+
+.grid > div > .tile.wall.path { /* probably not needed */
+	background-color: red;
+}
+
+.grid > div > .tile.start {
+	background-color: rgb(255, 144, 34) !important;
+}
+
+.grid > div > .tile.end {
+	background-color: #7adb7a !important;
+}
+
+.grid > div > .tile.exit {
+	background-image: none;
+	background-color: #666 !important;
+}
+
+.grid > div > .tile.start.end {
+	background-color: teal !important;
+}
+
+.grid > div > .tile.exit.end {
+	background-color: #000 !important;
+}
+
+.grid > div > .tile.in-range:not(.wall):not(.path) {
+	background-color: #ffef82;
+	opacity: 0.85;
+}
+
+.grid > div > .tile.in-range:not(.wall):not(.path):hover {
+	background-color: orange;
+	opacity: 0.7;
+}
+
+.grid > div > .tile.lava {
+	background-color: red;
+	animation: lava 2s infinite;
+	background-position: left calc(-304px * var(--scale)) top calc(-93px * var(--scale));
+}
+
+.grid > div > .tile .character {
+	--scale: 2;
+	display: block;
+	width: calc(16px * var(--scale)); /* tile size 32x32 */
+	height: calc(16px * var(--scale));
+
+	background-image: url(./textures.png); /* 934 × 562 */
+	background-size: calc(934px * var(--scale)) calc(562px * var(--scale));
+	background-position: left calc(-320px * var(--scale)) top calc(-93px * var(--scale));
+
+}
+
+.grid > div > .tile .character.selected {
+	background-color: #bb000099;
+}
+
+button {
+	font-size: 0.8rem;
+	border: 0;
+	background-color: #007aff;
+	color: #fff;
+	padding: 0.2em 0.5em 0.28em;
+	border-bottom: 0.15em solid #0005;
+	cursor: pointer;
+	position: relative;
+	top: 0em;
+	transition: all 0.1s ease;
+}
+
+button:hover,
+button:focus {
+	background-color: #007affbb;
+	top: 0.15em;
+	border-width: 0;
+}
+
+button.secondary {
+	background-color: #ccc;
+	color: #000;
+}
+
+button.secondary:hover,
+button.secondary:focus {
+	background-color: #ddd;
+}
+
+button.tertiary {
+	background-color: transparent;
+	color: #007aff;
+	border: 2px solid currentColor;
+	transition: none;
+}
